@@ -25,4 +25,4 @@ jobs:
     - name: deploying using surge
       run:  surge ./ madinadates.surge.sh --token$ {{ secrects.Madina_dates_token }}
     
-    {{
+    
