@@ -7,21 +7,16 @@ on:
  
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2-beta
-      
-      
+    - uses: actions/checkout@v2    
     - name: Installing NodeJS
       uses: actions/setup-node@v2-beta
       with:
-        node-version: 12
-      
+        node-version: '12'      
     - name: Installing surge 
-      run: npm install --global surge
-      
+      run: npm install --global surge      
     - name: deploying using surge
       run: surge ./ madinadates.surge.sh --token ${{ secrects.MADINA_DATETOKEN }}
     
